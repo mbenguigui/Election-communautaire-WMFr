@@ -1,0 +1,2 @@
+# Election communautaire WMFr
+ 
