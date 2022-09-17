@@ -32,8 +32,6 @@ for page in page_json['query']['pages']:
 			users.append(user['name'])
 
 for user in users:
-	print('Checking user {}'.format(user))
-
 	valid_total = False
 	valid_period = False
 
@@ -54,8 +52,6 @@ for user in users:
 			xtools_json = xtools_get.json()
 			user_contribs += len(xtools_json['globalcontribs'])
 
-			print('user_contribs: {} | total_contribs: {}'.format(user_contribs, total_contribs))
-
 			if user_contribs >= total_contribs:
 				valid_period = True
 				valid_total = True
@@ -64,10 +60,8 @@ for user in users:
 			offset = xtools_json['continue']
 
 	if valid_total and valid_period:
-		print('User {} is OK.\n'.format(user))
 		output += 'User {} is OK. CentralAuth: https://meta.wikimedia.org/wiki/Special:CentralAuth/{}\n'.format(user, user.replace(' ', '_'))
 	else:
-		print('User {} is KO.\n'.format(user))
 		output += 'User {} is KO.\n'.format(user)
 
 ofile = open(jconfig['result_file'], 'w')
