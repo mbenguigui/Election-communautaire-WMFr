@@ -1,8 +1,11 @@
 {
-	"users": [""],
+	"ua": "Check contributions script",
+	"email": "",
+	"site": "https://meta.wikimedia.org",
+	"pages": [""],
 	"start_date": "",
 	"end_date": "",
 	"total_contribs": ,
 	"period_contribs": ,
-	"result_file": ""
+	"result_file": "result.txt"
 }
